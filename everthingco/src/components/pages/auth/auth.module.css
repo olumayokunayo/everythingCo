@@ -1,0 +1,115 @@
+.loginDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.form input {
+  display: block;
+  margin-bottom: 1rem;
+  /* height: 2rem; */
+  width: 400px;
+  padding: 1rem;
+}
+.formDiv h1{
+    text-align: center;
+    color:  rgba(224, 19, 19, 0.694);
+}
+.button{
+    background: none;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    background-color: rgba(224, 19, 19, 0.694);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.l-button{
+    background: none;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    background-color: rgba(19, 19, 224, 0.694);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.link a{
+    text-decoration: none;
+    color: rgb(40, 40, 72);
+}
+.form p{
+    text-align: center;
+}
+.resetDiv{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin: 4rem auto ;
+    width: 500px;
+    background-color:rgba(255, 0, 0, 0.768);
+  
+}
+.resetDiv h1{
+    text-align: center;
+    color: #fff;
+}
+.r-button{
+    margin-left: 40%;
+    border-radius: 5px;
+    border: none;
+    background-color:  rgba(15, 14, 14, 0.922);
+    padding: 0.5rem 2rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.loginRegister {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.loginRegister a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.imageDiv {
+    animation: slide-down 1s ease;
+}
+.formDiv{
+    animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(5rem);
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .form input{
+        width: 300px;
+    }
+}
