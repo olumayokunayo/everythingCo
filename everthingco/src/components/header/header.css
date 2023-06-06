@@ -71,10 +71,10 @@ header .nav-btn {
   }
   header nav {
     position: fixed;
-    top: 7.5%;
+    top: 0;
     left: 0;
-    height: 50%;
-    width: 50%;
+    height: 70vh;
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -87,8 +87,8 @@ header .nav-btn {
   }
   nav .nav-close-btn {
     position: absolute;
-    top: 0rem;
-    right: 2rem;
+    top: 0;
+    right:0;
   }
   nav a {
     padding: 1rem;

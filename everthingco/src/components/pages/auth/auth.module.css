@@ -56,18 +56,19 @@
     height: 50vh;
     margin: 4rem auto ;
     width: 500px;
-    background-color:rgba(255, 0, 0, 0.768);
+    /* background-color:rgba(255, 0, 0, 0.768); */
   
 }
+
 .resetDiv h1{
     text-align: center;
-    color: #fff;
+color: orangered;
 }
 .r-button{
-    margin-left: 40%;
+    margin-left: 35%;
     border-radius: 5px;
     border: none;
-    background-color:  rgba(15, 14, 14, 0.922);
+    background-color:  orangered;
     padding: 0.5rem 2rem;
     color: #fff;
     font-weight: 600;
@@ -80,8 +81,11 @@
 }
 .loginRegister a{
     text-decoration: none;
-    color: #ffffff;
+    color: #000
 
+}
+.form{
+    padding: 1rem;
 }
 .imageDiv {
     animation: slide-down 1s ease;
