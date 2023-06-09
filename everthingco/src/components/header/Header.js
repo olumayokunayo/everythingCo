@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRef, useEffect } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "../header/header.css";
 import { FaTimes, FaBars, FaUserCircle } from "react-icons/fa";
 import { signOut } from "firebase/auth";
@@ -13,6 +13,9 @@ import { SET_ACTIVE_USER } from "../redux/slice/authSlice";
 import { REMOVE_ACTIVE_USER } from "../redux/slice/authSlice";
 import ShowOnLogin from "../hiddenLinks/hiddenLink";
 import { ShowOnLogOut } from "../hiddenLinks/hiddenLink";
+import AdminOnlyRoute, {
+  AdminOnlyLink,
+} from "../adminOnlyRoute/AdminOnlyRoute";
 const activeLink = ({ isActive }) => (isActive ? "active" : "");
 const Header = () => {
   const dispatch = useDispatch();
@@ -90,6 +93,12 @@ const Header = () => {
       <ToastContainer />
       {logo}
       <nav ref={navRef}>
+        <AdminOnlyLink>
+        <Link to='/admin/home'>
+        <button>Admin</button>
+        </Link>
+        
+        </AdminOnlyLink>
         <NavLink to="/" className={activeLink} onClick={hideNavbar}>
           Home
         </NavLink>
@@ -97,34 +106,31 @@ const Header = () => {
           Contact
         </NavLink>
         <ShowOnLogOut>
-        <NavLink to="/login" className={activeLink} onClick={hideNavbar}>
-          Login
-        </NavLink>
+          <NavLink to="/login" className={activeLink} onClick={hideNavbar}>
+            Login
+          </NavLink>
         </ShowOnLogOut>
         <ShowOnLogin>
-        <a href="#" style={{color: 'orangered'}}>
-          <FaUserCircle size={16} />
-          Hi, {displayName}
-        </a>
+          <a href="#" style={{ color: "orangered" }}>
+            <FaUserCircle size={16} />
+            Hi, {displayName}
+          </a>
         </ShowOnLogin>
         <ShowOnLogin>
-        <NavLink
-          to="/order-history"
-          className={activeLink}
-          onClick={hideNavbar}
-        >
-          My Orders
-        </NavLink>
+          <NavLink
+            to="/order-history"
+            className={activeLink}
+            onClick={hideNavbar}
+          >
+            My Orders
+          </NavLink>
         </ShowOnLogin>
         <ShowOnLogin>
           <NavLink to="/login" onClick={logoutHandler}>
             Logout
           </NavLink>
         </ShowOnLogin>
-        <ShowOnLogin>
-        {cart}
-        </ShowOnLogin>
-       
+        <ShowOnLogin>{cart}</ShowOnLogin>
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
