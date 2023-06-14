@@ -1,13 +1,14 @@
 import React from "react";
 import Slider from "../../slider/Slider";
 import AdminOnlyRoute from "../../adminOnlyRoute/AdminOnlyRoute";
+import Products from "../../products/Products";
 
 const Home = () => {
   return (
     <div>
-      {/* <Slider /> */}
+      {/* <Slider / > */}
       <h1>Home Page</h1>
-      {/* <AdminOnlyRoute /> */}
+    <Products />
     </div>
   );
 };
